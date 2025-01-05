@@ -252,6 +252,7 @@ function loop() {
 window.onload = function () {
   var merrywrap = document.getElementById("merrywrap");
   var box = merrywrap.getElementsByClassName("giftbox")[0];
+  const audio = document.getElementById("audio");
   var step = 1;
   var stepMinutes = [2000, 2000, 1000, 1000];
   function init() {
@@ -264,6 +265,7 @@ window.onload = function () {
   function openBox() {
     if (step === 1) {
       box.removeEventListener("click", openBox, false);
+      audio.play();
     }
     stepClass(step);
     if (step === 3) {
